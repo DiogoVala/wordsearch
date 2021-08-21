@@ -1,40 +1,43 @@
 
-f = open("words.txt", "r", encoding="utf8")
-f_s = open("../words_short.txt", "a", encoding="utf8")
-f_m = open("../words_med.txt", "a", encoding="utf8")
-f_l = open("../words_long.txt", "a", encoding="utf8")
+words = open("words.txt", "r", encoding="utf8")
+f4 = open("../words4.txt", "a", encoding="utf8")
+f5 = open("../words5.txt", "a", encoding="utf8")
+f6 = open("../words6.txt", "a", encoding="utf8")
+f7 = open("../words7.txt", "a", encoding="utf8")
+f8 = open("../words8.txt", "a", encoding="utf8")
+f9 = open("../words9.txt", "a", encoding="utf8")
+f10 = open("../words10.txt", "a", encoding="utf8")
+f11 = open("../words11.txt", "a", encoding="utf8")
+f12 = open("../words12.txt", "a", encoding="utf8")
 
-invalid_strs=list(open("names.txt", "r", encoding="utf8"))
-roman=["VIII", "LXXX", "DCCC"]
-invalid_strs=invalid_strs+roman
-
-f_s.truncate(0)
-f_m.truncate(0)
-f_l.truncate(0)
+#Clear files
+f4.truncate(0)
+f5.truncate(0)
+f6.truncate(0)
+f7.truncate(0)
+f8.truncate(0)
+f9.truncate(0)
+f10.truncate(0)
+f11.truncate(0)
+f12.truncate(0)
 
 flag=True;
-for line in f:
-	if(line in invalid_strs):
-		line=''
-
-	if(len(line) > 4 and len(line)<=7 and (not line.isupper())):
-		flag=True
-		for char in line:
-			if(char == '-' or char == 'k' or char == 'y' or char == 'w' or char == 'K' or char == 'Y' or char == 'W'):
-				flag=False
-		if(flag==True):
-			f_s.write(line.upper())
-	elif(len(line) > 6 and len(line)<=10 and (not line.isupper())):
-		flag=True
-		for char in line:
-			if(char == '-' or char == 'k' or char == 'y' or char == 'w' or char == 'K' or char == 'Y' or char == 'W'):
-				flag=False
-		if(flag==True):
-			f_m.write(line.upper())
-	elif(len(line) > 10 and len(line) < 14):
-		flag=True
-		for char in line:
-			if(char == '-' or char == 'k' or char == 'y' or char == 'w' or char == 'K' or char == 'Y' or char == 'W'):
-				flag=False
-		if(flag==True):
-			f_l.write(line.upper())
+for line in words:
+	if len(line)-1 == 4:
+		f4.write(line.upper())
+	elif len(line)-1 == 5:
+		f5.write(line.upper())
+	elif len(line)-1 == 6:
+		f6.write(line.upper())
+	elif len(line)-1 == 7:
+		f7.write(line.upper())
+	elif len(line)-1 == 8:
+		f8.write(line.upper())
+	elif len(line)-1 == 9:
+		f9.write(line.upper())
+	elif len(line)-1 == 10:
+		f10.write(line.upper())
+	elif len(line)-1 == 11:
+		f11.write(line.upper())
+	elif len(line)-1 == 12:
+		f12.write(line.upper())

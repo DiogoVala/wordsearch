@@ -20,23 +20,53 @@ class game_c:
 
 def readWords():
 
-    words_short=open('words_short.txt', encoding="utf8").readlines()
-    words_med=open('words_med.txt', encoding="utf8").readlines()
-    words_long=open('words_long.txt', encoding="utf8").readlines()
+    words4=open('words4.txt', encoding="utf8").readlines()
+    words5=open('words5.txt', encoding="utf8").readlines()
+    words6=open('words6.txt', encoding="utf8").readlines()
+    words7=open('words7.txt', encoding="utf8").readlines()
+    words8=open('words8.txt', encoding="utf8").readlines()
+    words9=open('words9.txt', encoding="utf8").readlines()
+    words10=open('words10.txt', encoding="utf8").readlines()
+    words11=open('words11.txt', encoding="utf8").readlines()
+    words12=open('words12.txt', encoding="utf8").readlines()
 
-    words_short = [random.choice(words_short).upper().strip() for _ in range(int(n_words/3))]
-    words_short.sort()
-    words_short.sort(key=len)
+    words4 = [random.choice(words4).upper().strip() for _ in range(3)]
+    words4.sort()
+    words4.sort(key=len)
 
-    words_med = [random.choice(words_med).upper().strip() for _ in range(int(n_words/3))]
-    words_med.sort()
-    words_med.sort(key=len)
+    words5 = [random.choice(words5).upper().strip() for _ in range(3)]
+    words5.sort()
+    words5.sort(key=len)
 
-    words_long = [random.choice(words_long).upper().strip() for _ in range(int(n_words/3))]
-    words_long.sort()
-    words_long.sort(key=len)
+    words6 = [random.choice(words6).upper().strip() for _ in range(3)]
+    words6.sort()
+    words6.sort(key=len)
 
-    words=words_short+words_med+words_long
+    words7 = [random.choice(words7).upper().strip() for _ in range(3)]
+    words7.sort()
+    words7.sort(key=len)
+
+    words8 = [random.choice(words8).upper().strip() for _ in range(3)]
+    words8.sort()
+    words8.sort(key=len)
+
+    words9 = [random.choice(words9).upper().strip() for _ in range(2)]
+    words9.sort()
+    words9.sort(key=len)
+
+    words10 = [random.choice(words10).upper().strip() for _ in range(3)]
+    words10.sort()
+    words10.sort(key=len)
+
+    words11 = [random.choice(words11).upper().strip() for _ in range(2)]
+    words11.sort()
+    words11.sort(key=len)
+
+    words12 = [random.choice(words12).upper().strip() for _ in range(2)]
+    words12.sort()
+    words12.sort(key=len)
+
+    words=words4+words5+words6+words7+words8+words9+words10+words11+words12
 
     return words
 
